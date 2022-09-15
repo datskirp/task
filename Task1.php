@@ -1,15 +1,14 @@
 <?php
 
-declare(strict_types=1);
-
 namespace src;
 
-class Task
+class Task1
 {
-    private $result;
-
-    public function main():
+    public function main(int $inputNumber): string
     {
-        return $this->result;
+        //Using nested ternary operator to get the result
+        return $inputNumber <= 10 ? 'Equal or less than 10' :
+                ($inputNumber <= 20 ? 'More than 10' :
+                ($inputNumber <= 30 ? 'More than 20' : 'More than 30'));
     }
 }
