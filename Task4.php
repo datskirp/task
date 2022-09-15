@@ -7,7 +7,7 @@ class Task4
     public function main(string $input): string
     {
         if (empty($input)) {
-            throw new \InvalidArgumentException('Method main only accepts non empty strings. Input was: '.$input);
+            throw new \InvalidArgumentException('Method main only accepts non empty strings.');
         }
         $input = strtolower($input);
         $needles = ['_', '-'];
