@@ -13,7 +13,7 @@ class Task8
         $str = '';
         //creating an anonymous function to hold information in a string
         $func = function ($item, $key) use (&$str) {
-            $str .= $key . ': ' . $item . "\r\n";
+            $str .= $key . ": " . $item . "\r\n";
         };
         array_walk_recursive($result, $func);
 
