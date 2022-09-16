@@ -4,7 +4,7 @@ namespace src;
 
 class Task6
 {
-    public function main(int $year, int $lastYear, int $month, int $lastMonth, string $day = 'Monday'): int
+    public function main(int $lastYear, int $year, int $lastMonth, int $month, string $day = 'Monday'): int
     {
         //validating dates with a function
         if (!$this->validateDates($year, $lastYear, $month, $lastMonth)) {
