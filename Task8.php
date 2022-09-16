@@ -7,7 +7,7 @@ class Task8
     public function main(string $json): string
     {
         $result = json_decode($json, true);
-        if ($result == null) {
+        if ($result == null or is_numeric($json)) {
             throw new \InvalidArgumentException('Method main accepts only valid json format.');
         }
         $str = '';
@@ -17,6 +17,6 @@ class Task8
         };
         array_walk_recursive($result, $func);
 
-        return $str;
+        return rtrim($str);
     }
 }
