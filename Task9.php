@@ -6,8 +6,8 @@ class Task9
 {
     public function main(array $arr, int $number): array
     {
-        if (empty($arr) or count($arr) < 3) {
-            throw new \InvalidArgumentException('Input array must not be empty or have less than 3 elements');
+        if (!$this->validateInput($arr, $number)) {
+            throw new \InvalidArgumentException('Invalid input');
         }
         $result = [];
         $answer = [];
@@ -24,5 +24,17 @@ class Task9
         }
 
         return $answer;
+    }
+    private function validateInput(array $arr, int $number): bool
+    {
+        if (empty($arr) or count($arr) < 3) {
+            return false;
+        } elseif ($number <= 0) {
+            return false;
+        } elseif (min($arr) < 0) {
+            return false;
+        } else {
+            return true;
+        }
     }
 }
