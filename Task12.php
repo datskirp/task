@@ -61,7 +61,7 @@ class Task12
 
     public function divideBy(int $number)
     {
-        if ($this->secondNumber == 0) {
+        if ($number == 0) {
             throw new \InvalidArgumentException('Cannot divide by zero');
         }
         $this->result /= $number;
